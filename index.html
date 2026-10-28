@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rizz Review Card | Kartu NFC + QR Google Review untuk Bisnis &amp; Reseller</title>
-  <meta name="description" content="Bantu bisnis membuka halaman ulasan Google lewat tap NFC atau scan QR. Ingin menjualnya kembali? Pilih akses supplier Rp57.000 atau Paket Master Rp99.000. Kartu fisik dipesan terpisah.">
+  <title>Rizz Review Card — Kartu Google Review NFC + QR untuk Reseller</title>
+  <meta name="description" content="Mulai jual Kartu Google Review NFC + QR ke bisnis lokal. Pelanggan dapat menempelkan ponsel yang mendukung NFC atau memindai QR untuk membuka tautan ulasan Google bisnis.">
   <meta name="theme-color" content="#020307">
+  <link rel="canonical" href="https://rizzai-tech.github.io/rizz-review-card-landing-page/">
+  <meta property="og:image" content="https://rizzai-tech.github.io/rizz-review-card-landing-page/WhatsApp%20Image%202026-10-14%20at%2021.34.26.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Rizz Review Card | Kartu NFC + QR Google Review untuk Bisnis &amp; Reseller">
-  <meta property="og:description" content="Kartu NFC + QR untuk memudahkan pelanggan membuka tautan ulasan Google. Tersedia pilihan akses supplier dan paket panduan reseller.">
+  <meta property="og:title" content="Rizz Review Card — Kartu Google Review NFC + QR untuk Reseller">
+  <meta property="og:description" content="Kartu Google Review NFC + QR untuk ditawarkan ke bisnis lokal, dengan opsi paket akses reseller dan panduan sesuai paket.">
   <link rel="icon" type="image/jpeg" href="logo.png.jpeg">
 
   <script>document.documentElement.classList.add('js');</script>
@@ -17,9 +20,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet">
-
-  <!-- Tailwind CSS v4 (Play CDN) — cadangan otomatis ke unpkg jika jsDelivr gagal dimuat -->
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" onerror="var s=document.createElement('script');s.src='https://unpkg.com/@tailwindcss/browser@4';document.head.appendChild(s);"></script>
 
   <style>
     /* ═════════════ 1 · DESIGN TOKENS ═════════════ */
@@ -68,8 +68,7 @@
     .panel{border-radius:32px}
 
     .btn{position:relative;isolation:isolate;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:.7rem;padding:.95rem 1.6rem;border:0;border-radius:999px;font:700 .95rem/1 'Instrument Sans',ui-sans-serif,system-ui,sans-serif;white-space:nowrap;cursor:pointer;transition:transform .3s var(--ease),box-shadow .35s var(--ease),background-color .3s,border-color .3s,color .3s}
-    .btn:active{transform:translateY(1px) scale(.985);filter:brightness(1.06)}
-    .btn:focus-visible{outline:2px solid var(--copper-hi);outline-offset:4px}
+    .btn:active{transform:scale(.98)}
     .btn .ic{width:18px;height:18px}
     .btn-lg{padding:1.1rem 1.9rem;font-size:1rem}
     .btn-sm{padding:.7rem 1.2rem;font-size:.88rem}
@@ -144,8 +143,6 @@
     .hv-card{position:absolute;width:62%;aspect-ratio:1/1;padding:7px;border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.17),rgba(255,255,255,.03));border:1px solid rgba(180,146,120,.4);box-shadow:0 36px 70px -26px rgba(0,0,0,.9),0 0 70px -18px rgba(180,146,120,.35);transform:rotate(var(--r,0deg)) perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .35s var(--ease)}
     .hv-inner{position:relative;width:100%;height:100%;overflow:hidden;border-radius:24px}
     .hv-inner img,.hv-inner .img-ph{display:block;width:100%;height:100%;object-fit:cover}
-    /* Kilau akrilik tipis: tetap membiarkan desain kartu terbaca */
-    .hv-inner::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;border-radius:inherit;background:linear-gradient(128deg,rgba(255,255,255,.22) 0%,rgba(255,255,255,.07) 12%,transparent 34%,transparent 72%,rgba(226,200,179,.10) 100%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16),inset 0 1px 0 rgba(255,255,255,.22);opacity:.72}
     .hv-dark{--r:-6deg;left:0;top:5%;z-index:2}
     .hv-light{--r:7deg;right:0;bottom:3%;z-index:1}
     .tap-ripple{position:absolute;width:0;height:0}
@@ -163,8 +160,7 @@
     @media(min-width:768px){.showcase{grid-template-columns:1fr 1fr}.edition + .edition{border-top:0;border-left:1px solid var(--line)}}
     .tilt{position:relative;overflow:hidden;border-radius:20px;box-shadow:0 30px 60px -26px rgba(0,0,0,.9);transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .3s var(--ease)}
     .tilt img,.tilt .img-ph{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
-    .tilt::before{content:"";position:absolute;z-index:2;inset:0;pointer-events:none;border-radius:inherit;background:linear-gradient(135deg,rgba(255,255,255,.16),transparent 24%,transparent 76%,rgba(226,200,179,.12));box-shadow:inset 0 0 0 1px rgba(255,255,255,.16),inset 0 1px 0 rgba(255,255,255,.18)}
-    .glare{position:absolute;z-index:3;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(340px circle at var(--gx,50%) var(--gy,0%),rgba(255,255,255,.25),transparent 55%)}
+    .glare{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(340px circle at var(--gx,50%) var(--gy,0%),rgba(255,255,255,.22),transparent 55%)}
     .tilt:hover .glare{opacity:1}
 
     /* ═════════════ 7 · NFC TAP SIMULATOR ═════════════ */
@@ -262,19 +258,7 @@
     .chip[aria-pressed="true"]{color:var(--ink);background:var(--copper);border-color:var(--copper);box-shadow:0 0 20px -4px var(--glow)}
     .calc-fields{display:grid;gap:1rem;margin-top:1.8rem}
     @media(min-width:640px){.calc-fields{grid-template-columns:1fr 1fr}}
-    .calc-fields .field-full{grid-column:1/-1}
     .hint{margin:.6rem 0 0;font-size:.8rem;color:var(--muted)}
-    .scenario-wrap{margin-top:1.3rem;padding-top:1.1rem;border-top:1px solid rgba(199,198,200,.14)}
-    .scenario-title{margin:0;color:#fff;font-size:.88rem;font-weight:700}
-    .scenario-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.55rem;margin-top:.65rem}
-    .scenario-card{min-width:0;padding:.75rem .55rem;text-align:left;border:1px solid rgba(199,198,200,.18);border-radius:14px;background:rgba(255,255,255,.035);color:var(--silver);cursor:pointer;transition:transform .22s var(--ease),border-color .22s,background-color .22s,box-shadow .22s}
-    .scenario-card:hover{transform:translateY(-2px);border-color:rgba(180,146,120,.7);background:rgba(180,146,120,.08)}
-    .scenario-card:focus-visible{outline:2px solid var(--copper-hi);outline-offset:3px}
-    .scenario-card[aria-pressed="true"]{border-color:var(--copper);background:rgba(180,146,120,.12);box-shadow:inset 0 0 0 1px rgba(180,146,120,.2)}
-    .scenario-card span{display:block;font-size:.72rem;color:var(--muted)}
-    .scenario-card b{display:block;margin-top:.2rem;font:700 clamp(.82rem,2.5vw,1rem)/1.25 var(--display);color:#fff;overflow-wrap:anywhere}
-    .scenario-card.is-neg b{color:#F1B1B1}
-    .scenario-note{margin:.65rem 0 0;font-size:.75rem;line-height:1.5;color:var(--muted)}
     .seg{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:6px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid rgba(199,198,200,.18)}
     .seg input{position:absolute;opacity:0;pointer-events:none}
     .seg label{display:block;padding:.7rem .5rem;border-radius:13px;text-align:center;font-size:.88rem;font-weight:700;line-height:1.3;color:var(--silver);cursor:pointer;transition:background-color .25s,color .25s,box-shadow .25s}
@@ -382,28 +366,58 @@
     .fab span{display:none}
     @media(min-width:640px){.fab{width:auto;padding:0 1.3rem}.fab span{display:inline}.fab .ic{width:20px;height:20px}}
 
-    /* ═════════════ 12 · SCROLL REVEAL + CTA MOBILE ═════════════ */
-    .reveal-enabled [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity .55s var(--ease),transform .55s var(--ease);transition-delay:var(--reveal-delay,0ms)}
-    .reveal-enabled [data-reveal].is-visible{opacity:1;transform:none}
-    .mobile-sticky-cta{display:none}
-    @media(max-width:767px){
-      .mobile-sticky-cta{position:fixed;z-index:44;left:0;right:0;bottom:0;display:block;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(8,9,12,.92);border-top:1px solid rgba(180,146,120,.34);box-shadow:0 -12px 36px rgba(0,0,0,.36);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);transform:translateY(120%);visibility:hidden;pointer-events:none;transition:transform .32s var(--ease),visibility 0s .32s}
-      .mobile-sticky-cta.is-visible{transform:translateY(0);visibility:visible;pointer-events:auto;transition-delay:0s}
-      .mobile-sticky-cta .btn{display:flex;width:100%;min-height:48px;padding:.9rem 1rem}
-      body.has-sticky-cta{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
-      body.has-sticky-cta .fab{bottom:calc(86px + env(safe-area-inset-bottom))}
+    /* Utilitas layout lokal: menghindari runtime Tailwind CDN di halaman produksi. */
+    .grid{display:grid}
+    .items-center{align-items:center}
+    .min-w-0{min-width:0}
+    .mx-auto{margin-inline:auto}
+    .max-w-5xl{max-width:64rem}
+    .max-w-md{max-width:28rem}
+    .mt-8{margin-top:2rem}
+    .gap-8{gap:2rem}
+    .gap-12{gap:3rem}
+    .gap-14{gap:3.5rem}
+    .gap-16{gap:4rem}
+    @media(min-width:768px){.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(min-width:1024px){
+      .lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+      [class~="lg:grid-cols-[1.1fr_.9fr]"]{grid-template-columns:1.1fr .9fr}
+      [class~="lg:grid-cols-[.8fr_1.2fr]"]{grid-template-columns:.8fr 1.2fr}
+      .lg\:items-center{align-items:center}
+    }
+    .eyebrow{display:inline-block;margin-bottom:1rem;font-size:.76rem;font-weight:800;letter-spacing:.17em;color:var(--copper-hi)}
+    .benefits-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+    .benefit-card{padding:clamp(22px,3vw,32px);min-width:0}
+    .benefit-icon{display:grid;place-items:center;width:46px;height:46px;margin-bottom:1.3rem;border-radius:15px;color:var(--copper-hi);background:rgba(180,146,120,.12);border:1px solid rgba(180,146,120,.35)}
+    .benefit-icon .ic{width:24px;height:24px}
+    .benefit-card p{margin:.75rem 0 0;color:var(--muted);font-size:.96rem}
+    .benefit-foot{margin:1.4rem 0 0;font-size:.88rem;color:var(--muted);max-width:52rem}
+    @media(min-width:720px){.benefits-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    .btn,.chip,.faq-q,.menu-btn{min-height:44px}
+    .btn{white-space:normal;text-align:center}
+    @media(max-width:639px){
+      .wrap{padding-inline:18px}
+      .section{padding-block:64px}
+      .hero-sec{padding-top:116px;padding-bottom:44px}
+      .cta-row{align-items:stretch}
+      .cta-row .btn{width:100%;white-space:normal;min-height:48px}
+      .hero-visual{max-width:400px}
+      .h1{font-size:clamp(2.15rem,10vw,3rem)}
+      .calc{padding:18px}
+      .faq-q{padding:1rem}
+      .faq-a p{padding-inline:1rem}
+      .sim-stage{transform:scale(.94);transform-origin:top center;margin-bottom:-35px}
     }
 
-    /* ═════════════ 13 · AKSESIBILITAS: kurangi gerakan ═════════════ */
+    /* ═════════════ 12 · AKSESIBILITAS: kurangi gerakan ═════════════ */
     @media (prefers-reduced-motion:reduce){
       html{scroll-behavior:auto}
-      *,*::before,*::after{animation-duration:.001ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
-      .reveal-enabled [data-reveal]{opacity:1!important;transform:none!important}
+      *,*::before,*::after{animation-duration:.001ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
     }
   </style>
 </head>
 
-<body>
+<body id="top">
   <div class="ambient" aria-hidden="true"></div>
   <div class="grain" aria-hidden="true"></div>
 
@@ -425,11 +439,12 @@
   <header class="site-header">
     <div class="wrap nav-wrap">
       <nav id="nav" class="glass nav" aria-label="Navigasi utama">
-        <a href="#hero" class="brand">
-          <img src="logo.png.jpeg" alt="Rizz AI Architect Logo" width="40" height="40" class="logo-img" data-fallback="R">
-          <span class="brand-name">Rizz AI Architect</span>
+        <a href="#top" class="brand">
+          <img src="logo.png.jpeg" alt="Logo Rizz Review Card" width="40" height="40" class="logo-img" data-fallback="R">
+          <span class="brand-name">Rizz Review Card</span>
         </a>
         <ul class="nav-links">
+          <li><a class="nav-link" data-nav href="#manfaat">Manfaat</a></li>
           <li><a class="nav-link" data-nav href="#showcase">Kartu</a></li>
           <li><a class="nav-link" data-nav href="#simulasi">Simulasi</a></li>
           <li><a class="nav-link" data-nav href="#kalkulator">Kalkulator</a></li>
@@ -438,7 +453,7 @@
           <li><a class="nav-link" data-nav href="#faq">FAQ</a></li>
         </ul>
         <div class="nav-actions">
-          <a href="#harga" class="btn btn-copper btn-sm nav-cta">Lihat Paket</a>
+          <a href="#harga" class="btn btn-copper btn-sm nav-cta">Lihat Paket Reseller</a>
           <button id="menuBtn" type="button" class="menu-btn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Buka menu navigasi">
             <svg class="ic i-open"><use href="#i-menu"/></svg>
             <svg class="ic i-close"><use href="#i-close"/></svg>
@@ -446,13 +461,14 @@
         </div>
       </nav>
       <div id="mobileMenu" class="glass mobile-menu">
+        <a class="nav-link" data-nav href="#manfaat">Manfaat</a>
         <a class="nav-link" data-nav href="#showcase">Kartu</a>
         <a class="nav-link" data-nav href="#simulasi">Simulasi</a>
         <a class="nav-link" data-nav href="#kalkulator">Kalkulator</a>
         <a class="nav-link" data-nav href="#harga">Harga</a>
         <a class="nav-link" data-nav href="#langkah">Cara kerja</a>
         <a class="nav-link" data-nav href="#faq">FAQ</a>
-        <a class="btn btn-copper" href="#harga">Lihat Paket</a>
+        <a class="btn btn-copper" href="#harga">Lihat Paket Reseller</a>
       </div>
     </div>
   </header>
@@ -463,24 +479,24 @@
     <section id="hero" class="hero-sec" aria-labelledby="hero-title">
       <div class="wrap grid items-center gap-14 lg:grid-cols-[1.1fr_.9fr]">
         <div class="min-w-0">
-          <span class="badge enter" style="--i:0">KARTU NFC + QR GOOGLE REVIEW · BISNIS & RESELLER</span>
-          <h1 id="hero-title" class="h1 chrome enter" style="--i:1">Kartu NFC + QR Google Review untuk Berbagai Jenis Bisnis—dan Peluang untuk Reseller.</h1>
+          <span class="badge enter" style="--i:0">KARTU GOOGLE REVIEW NFC + QR · PROGRAM RESELLER</span>
+          <h1 id="hero-title" class="h1 chrome enter" style="--i:1">Mulai jual Kartu Google Review NFC + QR ke bisnis lokal.</h1>
           <p class="lead enter" style="--i:2">
-            Untuk pemilik bisnis, kartu ini membantu pelanggan membuka tautan ulasan Google lewat tap NFC (jika ponsel mendukung) atau scan QR. Untuk kamu yang ingin menjualnya kembali, tersedia akses supplier dan Paket Master dengan panduan A–Z serta dashboard pengelolaan klien.
+            Tawarkan produk fisik yang mudah didemokan ke kafe, restoran, salon, barbershop, klinik, penginapan, dan toko. Pelanggan cukup <strong>menempelkan ponsel yang mendukung NFC atau memindai QR</strong> untuk membuka tautan ulasan Google bisnis yang sudah disiapkan.
           </p>
           <div class="cta-row enter" style="--i:3">
             <a class="btn btn-copper btn-lg" href="#harga">
               <span>Lihat Paket Reseller</span>
             </a>
-            <a class="btn btn-ghost btn-lg" href="https://wa.me/6289673666525?text=Halo%20Rizz%20AI%20Architect%2C%20saya%20ingin%20bertanya%20tentang%20kartu%20NFC%20%2B%20QR%20dan%20paket%20reseller%20Rizz%20Review%20Card.%20Bisa%20jelaskan%20pilihan%20yang%20sesuai%20kebutuhan%20saya%3F" target="_blank" rel="noopener noreferrer">
-              <svg class="ic"><use href="#i-chat"/></svg><span>Tanya via WhatsApp</span>
+            <a class="btn btn-ghost btn-lg" href="https://wa.me/6289673666525?text=Halo%2C%20saya%20tertarik%20menjadi%20reseller%20Rizz%20Review%20Card.%20Boleh%20minta%20detail%20paketnya%3F" target="_blank" rel="noopener noreferrer">
+              <svg class="ic"><use href="#i-chat"/></svg><span>Konsultasi via WhatsApp</span>
             </a>
           </div>
-          <p class="cta-note enter" style="--i:3">Harga Rp57.000 dan Rp99.000 adalah biaya akses reseller, bukan harga kartu fisik. Kartu dipesan terpisah melalui supplier. Untuk kebutuhan kartu bisnis sendiri, tanyakan pilihan yang tersedia lewat WhatsApp.</p>
+          <p class="cta-note enter" style="--i:3">Biaya akses paket mulai Rp57.000. Kartu fisik dipesan terpisah; cek rincian paket dan harga supplier sebelum memesan.</p>
           <ul class="trust-list enter" style="--i:4">
             <li><span class="ico"><svg class="ic"><use href="#i-nfc"/></svg></span>Dua cara membuka tautan: tap NFC atau scan QR</li>
-            <li><span class="ico"><svg class="ic"><use href="#i-lock"/></svg></span>Fitur PIN 4-digit per klien pada Paket Master</li>
-            <li><span class="ico"><svg class="ic"><use href="#i-grid"/></svg></span>Dashboard pengelolaan beberapa klien pada Paket Master</li>
+            <li><span class="ico"><svg class="ic"><use href="#i-star"/></svg></span>Tautan diarahkan ke halaman ulasan Google bisnis</li>
+            <li><span class="ico"><svg class="ic"><use href="#i-grid"/></svg></span>Paket dengan akses supplier dan panduan</li>
           </ul>
         </div>
 
@@ -501,16 +517,45 @@
         </div>
       </div>
       <div class="wrap">
-        <p class="fit-line enter" style="--i:5">Bisa ditawarkan ke kafe, restoran, barbershop, salon, klinik, hotel, penginapan, bengkel, dan toko lokal di berbagai kota.</p>
+        <p class="fit-line enter" style="--i:5">Calon pelanggan reseller: bisnis kuliner, salon, barbershop, klinik, penginapan, bengkel, dan toko retail.</p>
       </div>
     </section>
 
-    <!-- ═════════════ 3 · SHOWCASE VARIAN KARTU ═════════════ -->
+    <!-- ═════════════ 3 · MANFAAT PRODUK ═════════════ -->
+    <section id="manfaat" class="section" aria-labelledby="benefit-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">MANFAAT PRODUK</span>
+          <h2 id="benefit-title" class="h2">Buat halaman ulasan lebih mudah ditemukan pelanggan.</h2>
+          <p>Kartu ini menyederhanakan akses ke halaman ulasan. Kartu tidak membuat ulasan secara otomatis dan tidak menjamin rating atau jumlah ulasan akan naik.</p>
+        </div>
+        <div class="benefits-grid">
+          <article class="glass benefit-card" data-spot>
+            <span class="benefit-icon"><svg class="ic"><use href="#i-nfc"/></svg></span>
+            <h3 class="h3">Tap NFC</h3>
+            <p>Pelanggan menempelkan ponsel yang mendukung NFC dan mengaktifkan fiturnya pada area kartu yang sesuai.</p>
+          </article>
+          <article class="glass benefit-card" data-spot>
+            <span class="benefit-icon"><svg class="ic"><use href="#i-grid"/></svg></span>
+            <h3 class="h3">Scan QR</h3>
+            <p>Pilihan alternatif bagi pelanggan yang tidak memakai NFC atau lebih nyaman memindai QR melalui kamera ponsel.</p>
+          </article>
+          <article class="glass benefit-card" data-spot>
+            <span class="benefit-icon"><svg class="ic"><use href="#i-star"/></svg></span>
+            <h3 class="h3">Mudah didemokan reseller</h3>
+            <p>Tunjukkan alur produk langsung kepada pemilik bisnis dan jelaskan manfaatnya tanpa menjanjikan hasil ulasan tertentu.</p>
+          </article>
+        </div>
+        <p class="benefit-foot">Praktik yang baik: ajak pelanggan memberikan ulasan berdasarkan pengalaman nyata. Jangan memberi imbalan atau hanya meminta ulasan positif.</p>
+      </div>
+    </section>
+
+    <!-- ═════════════ 4 · SHOWCASE VARIAN KARTU ═════════════ -->
     <section id="showcase" class="section" aria-labelledby="showcase-title">
       <div class="wrap">
         <div class="sec-head">
-          <h2 id="showcase-title" class="h2">Dua Pilihan Desain untuk Berbagai Jenis Bisnis</h2>
-          <p>Pilih tampilan yang sesuai dengan karakter dan identitas bisnis Anda—gelap dan elegan, atau terang dan hangat. Keduanya dirancang dengan area Tap NFC dan QR Code untuk memudahkan pelanggan mengakses halaman ulasan Google.</p>
+          <h2 id="showcase-title" class="h2">Pilih tampilan kartu untuk karakter bisnis yang berbeda</h2>
+          <p>Dua pilihan visual ini memberi titik awal saat menawarkan produk. Pastikan tautan pada NFC dan QR sudah diuji sebelum kartu diserahkan ke pemilik bisnis.</p>
         </div>
         <div class="glass panel showcase" data-spot>
           <!-- Nama file asli: "WhatsApp Image 2026-10-14 at 21.34.26.jpeg" -->
@@ -520,8 +565,8 @@
               <span class="glare"></span>
             </div>
             <h3 class="h3">Dark Gold Edition</h3>
-            <p>Latar hitam dengan aksen emas memberi kesan tegas dan eksklusif. Bisa menjadi pilihan untuk tempat usaha yang memakai nuansa visual gelap atau premium.</p>
-            <p class="fit">Pertimbangkan untuk kafe, lounge, barbershop, atau klinik estetika yang sesuai dengan identitas visual ini.</p>
+            <p>Latar hitam pekat dengan aksen emas. Terkesan eksklusif untuk bisnis yang ingin tampil premium.</p>
+            <p class="fit">Cocok untuk kafe, lounge, barbershop, dan klinik estetika.</p>
           </article>
           <!-- Nama file asli: "WhatsApp Image 2026-10-16 at 14.17.53.jpeg" -->
           <article class="edition">
@@ -530,8 +575,8 @@
               <span class="glare"></span>
             </div>
             <h3 class="h3">Light Gold Edition</h3>
-            <p>Latar krem hangat dengan aksen tembaga memberi kesan terang, ramah, dan rapi untuk berbagai gaya tempat usaha.</p>
-            <p class="fit">Pertimbangkan untuk salon, bakery, restoran keluarga, atau toko fashion yang cocok dengan tampilan terang.</p>
+            <p>Latar krem hangat dengan aksen tembaga. Tampil bersih, ramah, dan tetap berkelas di berbagai suasana ruangan.</p>
+            <p class="fit">Cocok untuk salon, bakery, restoran keluarga, dan toko fashion.</p>
           </article>
         </div>
       </div>
@@ -541,23 +586,23 @@
     <section id="simulasi" class="section" aria-labelledby="sim-title">
       <div class="wrap grid items-center gap-16 lg:grid-cols-2">
         <div class="min-w-0">
-          <h2 id="sim-title" class="h2">Simulasikan Pengalaman Tap Kartu</h2>
-          <p class="lead">Lihat gambaran alur pelanggan: mendekatkan ponsel yang mendukung NFC ke kartu, atau memakai QR sebagai alternatif, untuk membuka tautan ulasan Google yang dituju. Tampilan di samping adalah demo, bukan halaman Google langsung.</p>
+          <h2 id="sim-title" class="h2">Simulasikan pengalaman pelanggan</h2>
+          <p class="lead">Lihat gambaran alurnya: kartu dibaca, lalu ponsel membuka tautan tujuan. Bagian ini adalah simulasi visual interaktif, bukan pembacaan chip NFC sungguhan.</p>
 
           <ol class="sim-steps">
-            <li><div><b>Dekatkan HP ke kartu NFC</b><span>Jika ponsel mendukung NFC, pelanggan tidak perlu mengetik tautan.</span></div></li>
-            <li><div><b>Ponsel membaca tautan</b><span>Ponsel membuka tujuan tautan yang sudah dikonfigurasi; QR bisa menjadi alternatif.</span></div></li>
-            <li><div><b>Halaman ulasan Google terbuka</b><span>Pelanggan dapat menulis ulasan sesuai pengalaman mereka.</span></div></li>
+            <li><div><b>Pelanggan menempelkan HP ke kartu</b><span>Cukup di area bertanda “Tap di sini”.</span></div></li>
+            <li><div><b>HP membaca tautan ulasan</b><span>Otomatis, tanpa instal aplikasi.</span></div></li>
+            <li><div><b>Google Review toko terbuka</b><span>Pelanggan memilih bintang dan menulis ulasan jujur.</span></div></li>
           </ol>
 
           <div class="mt-8 max-w-md">
-            <label for="shopName" class="field-label">Nama bisnis (untuk demo)</label>
-            <div class="field"><input id="shopName" type="text" maxlength="28" value="Kopi Senja Coffee" autocomplete="off" spellcheck="false"></div>
+            <label for="shopName" class="field-label">Nama toko klien (untuk demo)</label>
+            <div class="field"><input id="shopName" type="text" maxlength="28" value="Nama Bisnis Anda" autocomplete="off" spellcheck="false"></div>
           </div>
 
           <div class="sim-row">
             <button id="tapBtn" type="button" class="btn btn-copper btn-lg"><svg class="ic"><use href="#i-nfc"/></svg><span id="tapBtnLabel">Simulasi Tap Kartu</span></button>
-            <p id="simStatus" class="sim-status" role="status" aria-live="polite">Demo siap. Klik tombol untuk melihat ilustrasi alur pelanggan.</p>
+            <p id="simStatus" class="sim-status" role="status" aria-live="polite">Siap. Klik tombol untuk melihat apa yang dialami pelanggan.</p>
           </div>
         </div>
 
@@ -585,7 +630,7 @@
                   <div class="rv-title">Tulis ulasan</div>
                   <div class="rv-shop">
                     <span class="rv-ava" data-initial>K</span>
-                    <div><b data-shop>Kopi Senja Coffee</b><small>Ulasan Anda tampil publik di Google</small></div>
+                    <div><b data-shop>Nama Bisnis Anda</b><small>Ulasan Anda tampil publik di Google</small></div>
                   </div>
                   <p class="rv-hint">Bagikan pengalaman Anda di Google</p>
                   <div class="rv-stars" role="radiogroup" aria-label="Penilaian demo">
@@ -602,7 +647,7 @@
 
                 <div class="nfc-banner" aria-hidden="true">
                   <span class="nb-ico"><svg class="ic"><use href="#i-nfc"/></svg></span>
-                  <div><b>Demo: kartu dibaca</b><small>Contoh alur menuju tautan ulasan</small></div>
+                  <div><b>Kartu NFC terdeteksi</b><small>Rizz Review Card. Ketuk untuk membuka.</small></div>
                 </div>
 
                 <div class="sim-pop" aria-hidden="true">
@@ -612,15 +657,15 @@
                       <i class="spark" style="--a:0deg"></i><i class="spark" style="--a:45deg"></i><i class="spark" style="--a:90deg"></i><i class="spark" style="--a:135deg"></i>
                       <i class="spark" style="--a:180deg"></i><i class="spark" style="--a:225deg"></i><i class="spark" style="--a:270deg"></i><i class="spark" style="--a:315deg"></i>
                     </div>
-                    <h3 class="pop-title">Simulasi selesai!</h3>
-                    <p class="pop-text">Contoh tujuan: halaman ulasan Google<br><b data-shop>Kopi Senja Coffee</b></p>
+                    <h3 class="pop-title">Simulasi selesai</h3>
+                    <p class="pop-text">Mengarahkan ke Google Review<br><b data-shop>Nama Bisnis Anda</b></p>
                     <div class="pop-bar"><i></i></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <p class="hint" style="text-align:center">Ini hanya simulasi visual dan tidak terhubung ke profil Google nyata. Pada kartu yang sudah dikonfigurasi, NFC atau QR akan membuka tautan yang ditetapkan untuk bisnis tersebut.</p>
+          <p class="hint" style="text-align:center">Demo visual saja — simulasi ini tidak membaca chip NFC dan tidak mengirim ulasan. Kartu fisik harus dikonfigurasi dengan tautan Google Review bisnis yang benar.</p>
         </div>
       </div>
     </section>
@@ -629,44 +674,37 @@
     <section id="kalkulator" class="section" aria-labelledby="calc-title">
       <div class="wrap">
         <div class="sec-head">
-          <h2 id="calc-title" class="h2">Kalkulator Simulasi Margin Reseller</h2>
-          <p>Masukkan jumlah kartu, modal per kartu, harga jual, dan paket akses. Kalkulator memperkirakan selisih setelah modal kartu dan biaya paket—bukan memprediksi berapa banyak kartu yang pasti terjual.</p>
+          <h2 id="calc-title" class="h2">Kalkulator Simulasi Reseller</h2>
+          <p>Ubah jumlah kartu, modal fisik per unit, harga jual, dan paket akses untuk melihat simulasi margin. Angka bawaan hanya contoh, bukan janji penghasilan.</p>
         </div>
 
         <div class="glass panel calc" data-spot>
           <div class="min-w-0">
             <div class="calc-top">
-              <label for="qty" class="field-label" style="margin:0">Jumlah kartu untuk simulasi</label>
+              <label for="qty" class="field-label" style="margin:0">Jumlah kartu yang terjual</label>
               <div class="qty-big"><span id="qtyVal">50</span> <small>kartu</small></div>
             </div>
-            <input id="qty" class="range" type="range" min="1" max="100" step="1" value="10" aria-valuetext="10 kartu">
-            <div class="range-ends" aria-hidden="true"><span>1</span><span>100</span></div>
+            <input id="qty" class="range" type="range" min="10" max="100" step="5" value="50">
+            <div class="range-ends" aria-hidden="true"><span>10</span><span>100</span></div>
             <div class="chips" role="group" aria-label="Pilihan cepat jumlah kartu">
-              <button type="button" class="chip" data-qty="1" aria-pressed="false">1</button>
-              <button type="button" class="chip" data-qty="5" aria-pressed="false">5</button>
-              <button type="button" class="chip" data-qty="10" aria-pressed="true">10</button>
+              <button type="button" class="chip" data-qty="10" aria-pressed="false">10</button>
               <button type="button" class="chip" data-qty="25" aria-pressed="false">25</button>
-              <button type="button" class="chip" data-qty="50" aria-pressed="false">50</button>
+              <button type="button" class="chip" data-qty="50" aria-pressed="true">50</button>
               <button type="button" class="chip" data-qty="75" aria-pressed="false">75</button>
               <button type="button" class="chip" data-qty="100" aria-pressed="false">100</button>
             </div>
 
             <div class="calc-fields">
               <div>
-                <label for="cost" class="field-label">Modal kartu per unit</label>
-                <div class="field"><span>Rp</span><input id="cost" type="number" inputmode="numeric" min="0" step="1000" value="30000"></div>
+                <label for="cost" class="field-label">Modal fisik per kartu</label>
+                <div class="field"><span>Rp</span><input id="cost" type="number" inputmode="numeric" min="0" step="1000" value="15000"></div>
               </div>
               <div>
-                <label for="price" class="field-label">Harga jual ke klien per kartu</label>
+                <label for="price" class="field-label">Harga jual per kartu</label>
                 <div class="field"><span>Rp</span><input id="price" type="number" inputmode="numeric" min="0" step="1000" value="75000"></div>
               </div>
-              <div class="field-full">
-                <label for="extraCost" class="field-label">Biaya operasional tambahan (total simulasi)</label>
-                <div class="field"><span>Rp</span><input id="extraCost" type="number" inputmode="numeric" min="0" step="1000" value="0"></div>
-                <p class="hint">Masukkan biaya di luar kartu dan paket, misalnya transportasi, promosi, atau biaya operasional lain. Gunakan total untuk skenario yang sedang dihitung.</p>
-              </div>
             </div>
-            <p class="hint">Angka di atas hanya contoh. Ganti dengan harga kartu dari supplier dan harga jual yang realistis untuk pasar Anda. Modal kartu dihitung per unit; biaya operasional tambahan dihitung sebagai total satu skenario.</p>
+            <p class="hint">Masukkan total biaya fisik per unit, termasuk kartu, cetak/finishing, dan kemasan jika ada. Ongkir, pemasaran, pajak, serta biaya operasional lain belum dihitung.</p>
 
             <fieldset style="margin:1.6rem 0 0;padding:0;border:0">
               <legend class="field-label">Paket yang Anda ambil</legend>
@@ -683,32 +721,21 @@
             <dl>
               <div class="res-row"><dt>Total modal kartu</dt><dd id="rCost">Rp0</dd></div>
               <div class="res-row"><dt>Total penjualan ke klien</dt><dd id="rRev">Rp0</dd></div>
-              <div class="res-row"><dt>Biaya akses paket</dt><dd id="rPkg">Rp0</dd></div>
-              <div class="res-row"><dt>Biaya operasional tambahan</dt><dd id="rExtra">Rp0</dd></div>
             </dl>
             <div id="rNetWrap" class="res-net">
-              <span class="lbl">Estimasi hasil setelah seluruh biaya yang dimasukkan</span>
+              <span class="lbl">Estimasi sisa setelah modal kartu dan akses paket</span>
               <strong id="rNet">Rp0</strong>
               <small id="rNetNote"></small>
             </div>
             <div class="stack" aria-hidden="true"><i id="barCost" class="s-cost"></i><i id="barProfit" class="s-profit"></i></div>
-            <div class="legend" aria-hidden="true"><span class="l-cost">Total modal &amp; biaya</span><span class="l-profit">Sisa setelah biaya</span></div>
+            <div class="legend" aria-hidden="true"><span class="l-cost">Modal kartu</span><span class="l-profit">Selisih penjualan vs modal kartu</span></div>
             <dl class="mini">
-              <div><dt>Selisih harga per kartu (sebelum biaya lain)</dt><dd id="rUnit">Rp0</dd></div>
-              <div><dt>Margin kotor per kartu</dt><dd id="rMargin">0%</dd></div>
-              <div><dt>Unit untuk menutup paket + biaya tambahan</dt><dd id="rPayback">–</dd></div>
+              <div><dt>Selisih per kartu</dt><dd id="rUnit">Rp0</dd></div>
+              <div><dt>Margin kotor</dt><dd id="rMargin">0%</dd></div>
+              <div><dt>Kartu untuk menutup biaya akses</dt><dd id="rPayback">–</dd></div>
             </dl>
-            <div class="scenario-wrap" aria-labelledby="scenario-title">
-              <p class="scenario-title" id="scenario-title">Bandingkan skenario penjualan</p>
-              <div class="scenario-grid">
-                <button class="scenario-card" type="button" data-scenario="1" aria-pressed="false"><span>1 kartu</span><b data-scenario-net>Rp0</b></button>
-                <button class="scenario-card" type="button" data-scenario="5" aria-pressed="false"><span>5 kartu</span><b data-scenario-net>Rp0</b></button>
-                <button class="scenario-card" type="button" data-scenario="10" aria-pressed="true"><span>10 kartu</span><b data-scenario-net>Rp0</b></button>
-              </div>
-              <p class="scenario-note">Angka tiap skenario memakai harga per kartu, paket, dan biaya operasional tambahan yang sama. Klik skenario untuk memuat jumlah kartu tersebut ke kalkulator; sesuaikan biaya tambahan bila kebutuhan operasional berubah.</p>
-            </div>
             <a class="btn btn-copper btn-lg" href="https://lynk.id/rizzsmart/kpk14z0e0n46/checkout?type=detail&amp;token=.eJyrVipILErMLVayUoqOVdJRKslMzk4tgXOTMlPiC4oyk1OBAgZAfmFJJZCfn6JkZaijVJxaXJwJZCqB9OWXJObAlcIFSvMySyD80pLceLhV1bVKtQA9XSbt.atzHKg.YBiHl6kQrFVuonIFZ96co-BzEtk" target="_blank" rel="noopener noreferrer">Ambil Paket Master</a>
-            <p class="disclaimer">Rumus: (jumlah kartu × harga jual) − (jumlah kartu × modal kartu) − biaya akses paket − biaya operasional tambahan. Waktu kerja, pajak, dan biaya lain yang belum dimasukkan tidak tercakup. Hasil hanyalah simulasi, bukan jaminan penghasilan.</p>
+            <p class="disclaimer">Simulasi hanya menghitung modal kartu yang kamu masukkan dan biaya akses paket. Belum menghitung operasional, pajak, biaya pemasaran, atau stok yang belum terjual. Ini bukan jaminan penghasilan.</p>
           </div>
         </div>
       </div>
@@ -718,44 +745,44 @@
     <section id="harga" class="section" aria-labelledby="harga-title">
       <div class="wrap">
         <div class="sec-head center">
-          <h2 id="harga-title" class="h2">Pilih akses reseller sesuai kebutuhanmu</h2>
-          <p>Keduanya adalah biaya akses reseller digital; kartu fisik tidak termasuk dan dipesan terpisah. Pembayaran dilakukan melalui checkout Lynk.id.</p>
+          <h2 id="harga-title" class="h2">Pilih paket yang sesuai kebutuhan Anda</h2>
+          <p>Harga berikut adalah biaya akses paket reseller. Kartu fisik dipesan terpisah dan harganya mengikuti supplier; cek isi paket sebelum checkout.</p>
         </div>
 
         <div class="mx-auto grid max-w-5xl gap-8 lg:grid-cols-2 lg:items-center">
           <!-- PAKET 1 -->
           <article class="glass price-card">
             <p class="plan-kicker">Paket 1</p>
-            <h3 class="h3">Akses Supplier</h3>
-            <p class="plan-desc">Untuk kamu yang hanya membutuhkan akses supplier dan siap mencari serta melayani calon klien sendiri.</p>
+            <h3 class="h3">Akses Supplier Eksklusif</h3>
+            <p class="plan-desc">Untuk yang sudah punya cara jualan sendiri dan membutuhkan akses supplier kartu.</p>
             <p class="plan-price"><small>Rp</small><strong>57.000</strong></p>
             <ul class="checks">
-              <li>Akses supplier untuk memesan kartu NFC + QR</li>
+              <li>Akses supplier kartu NFC + QR sesuai penawaran paket</li>
               <li>Pilihan desain Dark Gold dan Light Gold</li>
-              <li>Bekal untuk mulai menawarkan kartu ke berbagai jenis bisnis</li>
+              <li>Siap pesan untuk klien pertama Anda</li>
             </ul>
             <a class="btn btn-outline btn-lg" href="https://lynk.id/rizzsmart/n56ewnm12l54/checkout?type=detail&amp;token=.eJyrVipILErMLVayUoqOVdJRKslMzk4tgXOTMlPiC4oyk1OBAgZAfmFJJZCfn6JkZaijVJxaXJwJZCqB9OWXJObAlcIFSvMySyD80pLceLhV1bVKtQA9XSbt.atzHaA.s39hbsL-vnoPp1jCzNGORmOQ3e4" target="_blank" rel="noopener noreferrer">Ambil Akses</a>
           </article>
 
-          <!-- PAKET 2 — PAKET LENGKAP -->
+          <!-- PAKET 2 — PALING POPULER -->
           <article class="glass price-card is-pop">
-            <span class="pop-badge">PAKET LENGKAP</span>
+            <span class="pop-badge">PALING POPULER</span>
             <p class="plan-kicker">Paket 2</p>
             <h3 class="h3">Paket All-In Master</h3>
-            <p class="plan-desc">Untuk pemula yang ingin menggabungkan akses supplier, panduan langkah demi langkah, dan alat bantu pengelolaan beberapa klien.</p>
+            <p class="plan-desc">Pilihan untuk pemula yang ingin akses supplier sekaligus panduan dan fitur tambahan yang tercantum di paket.</p>
             <p class="plan-price"><small>Rp</small><strong>99.000</strong></p>
             <ul class="checks">
-              <li>Semua isi Paket 1: akses supplier</li>
-              <li>Panduan A–Z untuk menyiapkan dan menawarkan produk ke berbagai jenis bisnis</li>
-              <li>Dashboard untuk mengelola beberapa klien</li>
-              <li>Proteksi Fitur PIN 4-digit per klien pada Paket Master</li>
+              <li>Semua isi Paket 1: Akses Supplier Eksklusif</li>
+              <li>Panduan A–Z menawarkan kartu ke bisnis lokal</li>
+              <li>Akses dashboard multi-klien sesuai rincian paket</li>
+              <li>Fitur PIN 4-digit sebagaimana tercantum dalam penawaran</li>
             </ul>
             <a class="btn btn-copper btn-lg" href="https://lynk.id/rizzsmart/kpk14z0e0n46/checkout?type=detail&amp;token=.eJyrVipILErMLVayUoqOVdJRKslMzk4tgXOTMlPiC4oyk1OBAgZAfmFJJZCfn6JkZaijVJxaXJwJZCqB9OWXJObAlcIFSvMySyD80pLceLhV1bVKtQA9XSbt.atzHKg.YBiHl6kQrFVuonIFZ96co-BzEtk" target="_blank" rel="noopener noreferrer">Ambil Paket Master</a>
-            <p class="price-note">Dengan tambahan Rp42.000, Paket Master mencakup Panduan A–Z, dashboard, dan fitur PIN 4-digit.</p>
+            <p class="price-note">Selisih Rp42.000 dari Paket 1. Periksa rincian isi paket dan pastikan sesuai kebutuhanmu sebelum checkout.</p>
           </article>
         </div>
 
-        <p class="pricing-foot">Masih membandingkan paket? <a href="https://wa.me/6289673666525" target="_blank" rel="noopener noreferrer">Tanyakan dulu lewat WhatsApp</a>.</p>
+        <p class="pricing-foot">Masih ragu memilih? <a href="https://wa.me/6289673666525" target="_blank" rel="noopener noreferrer">Tanya dulu via WhatsApp</a>.</p>
       </div>
     </section>
 
@@ -763,29 +790,29 @@
     <section id="langkah" class="section" aria-labelledby="langkah-title">
       <div class="wrap">
         <div class="sec-head">
-          <h2 id="langkah-title" class="h2">Empat Langkah Memulai Penjualan ke Berbagai Jenis Bisnis</h2>
-          <p>Ini alur awalnya. Hasil penjualan tetap bergantung pada cara kamu mencari prospek, menawarkan produk, dan melayani klien.</p>
+          <h2 id="langkah-title" class="h2">Dari memilih paket sampai menawarkan kartu ke bisnis</h2>
+          <p>Alur dasar reseller. Biaya akses paket tidak termasuk harga kartu fisik.</p>
         </div>
         <ol class="glass panel steps" style="margin:0;padding:0;list-style:none">
           <li class="step">
             <span class="step-n" aria-hidden="true">01</span>
-            <h3 class="h3">Pilih akses yang sesuai</h3>
-            <p>Bandingkan isi Paket 1 dan Paket Master sebelum checkout.</p>
+            <h3 class="h3">Pilih paket</h3>
+            <p>Pilih akses supplier saja atau paket dengan panduan dan fitur tambahan.</p>
           </li>
           <li class="step">
             <span class="step-n" aria-hidden="true">02</span>
-            <h3 class="h3">Pelajari produk dan panduan</h3>
-            <p>Gunakan materi yang termasuk dalam paket dan tentukan desain yang sesuai dengan bisnis calon klien.</p>
+            <h3 class="h3">Ambil akses supplier</h3>
+            <p>Pesan kartu fisik sesuai kebutuhan, lalu pilih desain serta jumlah yang akan ditawarkan.</p>
           </li>
           <li class="step">
             <span class="step-n" aria-hidden="true">03</span>
-            <h3 class="h3">Konfigurasikan tautan klien</h3>
-            <p>Pastikan tautan ulasan Google benar untuk bisnis tersebut, lalu uji NFC dan QR sebelum menyerahkan kartu. Gunakan fitur dashboard dan PIN sesuai paket yang dipilih.</p>
+            <h3 class="h3">Aktifkan kartu klien</h3>
+            <p>Siapkan tautan Google Review bersama pemilik bisnis, konfigurasi kartu sesuai alur yang tersedia, lalu uji NFC dan QR sebelum diserahkan.</p>
           </li>
           <li class="step">
             <span class="step-n" aria-hidden="true">04</span>
-            <h3 class="h3">Tawarkan, layani, lalu hitung margin</h3>
-            <p>Jelaskan fungsi kartu secara jujur dan pastikan tautannya benar. Hitung margin dari harga jual dikurangi modal kartu, biaya akses, dan biaya operasional yang relevan.</p>
+            <h3 class="h3">Serahkan dan ambil margin</h3>
+            <p>Tawarkan kartu kepada bisnis dan sepakati harga. Hasil usaha bergantung pada selisih penjualan dengan semua biaya yang benar-benar dikeluarkan; penjualan tidak dijamin.</p>
           </li>
         </ol>
       </div>
@@ -795,8 +822,8 @@
     <section id="faq" class="section" aria-labelledby="faq-title">
       <div class="wrap grid gap-12 lg:grid-cols-[.8fr_1.2fr]">
         <div>
-          <h2 id="faq-title" class="h2">Pertanyaan sebelum memilih paket</h2>
-          <p class="lead">Masih ada yang belum jelas tentang kartu atau akses reseller? Tanyakan dulu lewat WhatsApp sebelum checkout.</p>
+          <h2 id="faq-title" class="h2">Pertanyaan yang sering diajukan</h2>
+          <p class="lead">Baca informasi berikut sebelum membeli. Untuk detail paket atau proses pemesanan, hubungi kami lewat WhatsApp.</p>
           <div class="cta-row">
             <a class="btn btn-ghost" href="https://wa.me/6289673666525" target="_blank" rel="noopener noreferrer"><svg class="ic"><use href="#i-chat"/></svg><span>Tanya via WhatsApp</span></a>
           </div>
@@ -805,31 +832,39 @@
         <div class="glass panel faq">
           <div class="faq-item">
             <h3><button class="faq-q" id="faq-q1" type="button" aria-expanded="true" aria-controls="faq-a1"><span>Apa itu Rizz Review Card?</span><span class="faq-ico"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3>
-            <div class="faq-a is-open" id="faq-a1" role="region" aria-labelledby="faq-q1"><div><p>Rizz Review Card adalah kartu fisik dengan NFC dan QR yang dapat dikonfigurasi untuk membuka tautan ulasan Google bisnis. Pelanggan bisa mendekatkan ponsel yang mendukung NFC atau memindai QR, tanpa perlu mencari nama toko secara manual.</p></div></div>
+            <div class="faq-a is-open" id="faq-a1" role="region" aria-labelledby="faq-q1"><div><p>Kartu fisik dengan NFC dan QR yang, setelah ditautkan dengan benar, membantu pelanggan membuka halaman ulasan Google bisnis melalui ponsel yang kompatibel atau pemindai QR.</p></div></div>
           </div>
           <div class="faq-item">
-            <h3><button class="faq-q" id="faq-q2" type="button" aria-expanded="false" aria-controls="faq-a2"><span>Saya baru mulai dan belum paham teknis. Apakah bisa belajar?</span><span class="faq-ico"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3>
-            <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2"><div><p>Paket Master mencakup Panduan A–Z dan dashboard sesuai rincian paket. Kamu tetap perlu mempelajari panduannya, mencari calon bisnis, menetapkan harga jual, dan memastikan kartu mengarah ke tautan yang benar. Paket ini tidak menjamin penjualan.</p></div></div>
+            <h3><button class="faq-q" id="faq-q2" type="button" aria-expanded="false" aria-controls="faq-a2"><span>Saya tidak paham teknis. Apakah tetap bisa menjalankan bisnis ini?</span><span class="faq-ico"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2"><div><p>Paket All-In Master mencantumkan Panduan A–Z dan dashboard untuk pengelolaan klien. Pelajari panduannya dan pastikan alur aktivasi yang disediakan sesuai kebutuhan sebelum menjual layanan ini ke klien.</p></div></div>
           </div>
           <div class="faq-item">
-            <h3><button class="faq-q" id="faq-q3" type="button" aria-expanded="false" aria-controls="faq-a3"><span>Apa perbedaan Paket 1 dan Paket Master?</span><span class="faq-ico"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3>
-            <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3"><div><p>Paket 1 seharga Rp57.000 berisi akses supplier untuk memesan kartu. Paket Master seharga Rp99.000 menambahkan Panduan A–Z, dashboard pengelolaan beberapa klien, dan fitur PIN 4-digit. Biaya paket adalah biaya akses; kartu fisik dipesan terpisah melalui supplier.</p></div></div>
+            <h3><button class="faq-q" id="faq-q3" type="button" aria-expanded="false" aria-controls="faq-a3"><span>Apa bedanya Paket 1 dan Paket 2?</span><span class="faq-ico"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3"><div><p>Paket 1 (Rp57.000) memberi Akses Supplier Eksklusif. Paket All-In Master (Rp99.000) menambahkan Panduan A–Z dan dashboard multi-klien yang tercantum di penawaran. Kartu fisik dibayar terpisah.</p></div></div>
           </div>
           <div class="faq-item">
-            <h3><button class="faq-q" id="faq-q4" type="button" aria-expanded="false" aria-controls="faq-a4"><span>Apakah pelanggan perlu menginstal aplikasi untuk memakai kartu?</span><span class="faq-ico"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3>
-            <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4"><div><p>Umumnya tidak perlu aplikasi tambahan. Ponsel harus mendukung NFC dan fitur itu aktif untuk tap; sebagai alternatif, pelanggan dapat memindai QR dengan kamera atau aplikasi pemindai QR. Keduanya membuka tautan yang dikonfigurasi pada kartu.</p></div></div>
+            <h3><button class="faq-q" id="faq-q4" type="button" aria-expanded="false" aria-controls="faq-a4"><span>Apakah pelanggan harus menginstal aplikasi?</span><span class="faq-ico"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4"><div><p>NFC hanya dapat digunakan pada ponsel yang mendukung NFC dan fitur tersebut aktif. QR menjadi alternatif untuk ponsel tanpa NFC; umumnya dapat dipindai melalui kamera atau pembaca QR. Tautan harus diuji terlebih dahulu.</p></div></div>
           </div>
           <div class="faq-item">
-            <h3><button class="faq-q" id="faq-q5" type="button" aria-expanded="false" aria-controls="faq-a5"><span>Apa fungsi PIN 4-digit pada Paket Master?</span><span class="faq-ico"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3>
-            <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5"><div><p>Paket Master mencakup PIN 4-digit untuk membatasi akses ke pengaturan tiap klien. Ikuti petunjuk dashboard dan jangan membagikan PIN kepada pihak yang tidak berwenang.</p></div></div>
+            <h3><button class="faq-q" id="faq-q5" type="button" aria-expanded="false" aria-controls="faq-a5"><span>Bagaimana PIN 4-digit melindungi data klien?</span><span class="faq-ico"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5"><div><p>Paket Master mencantumkan dashboard multi-klien dengan PIN 4-digit. Tanyakan detail akses dan demonstrasi sebelum membeli jika pengelolaan ini menjadi pertimbangan utama.</p></div></div>
           </div>
           <div class="faq-item">
-            <h3><button class="faq-q" id="faq-q6" type="button" aria-expanded="false" aria-controls="faq-a6"><span>Berapa biaya awal dan apakah sudah termasuk kartu fisik?</span><span class="faq-ico"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3>
-            <div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-q6"><div><p>Biaya akses reseller mulai dari Rp57.000 untuk Paket 1 atau Rp99.000 untuk Paket Master. Harga tersebut tidak termasuk kartu fisik; kartu dipesan terpisah dan harganya mengikuti supplier. Pembayaran akses dilakukan lewat checkout Lynk.id. Untuk pembelian kartu bagi bisnis sendiri, konsultasikan kebutuhan dan harga lewat WhatsApp.</p></div></div>
+            <h3><button class="faq-q" id="faq-q6" type="button" aria-expanded="false" aria-controls="faq-a6"><span>Berapa modal untuk mulai, dan bagaimana cara bayarnya?</span><span class="faq-ico"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-q6"><div><p>Biaya akses mulai dari Rp57.000 (Paket 1) atau Rp99.000 (Paket Master). Pembayaran lewat halaman checkout Lynk.id, sedangkan harga kartu mengikuti harga dari supplier. Ada pertanyaan sebelum membeli? Chat kami lewat WhatsApp.</p></div></div>
           </div>
           <div class="faq-item">
-            <h3><button class="faq-q" id="faq-q7" type="button" aria-expanded="false" aria-controls="faq-a7"><span>Bolehkah memberi hadiah agar pelanggan menulis ulasan?</span><span class="faq-ico"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3>
-            <div class="faq-a" id="faq-a7" role="region" aria-labelledby="faq-q7"><div><p>Jangan menawarkan hadiah atau imbalan sebagai syarat ulasan, jangan meminta hanya pelanggan yang puas untuk mengulas, dan jangan mengarahkan pelanggan agar memberi bintang tertentu. Gunakan kartu untuk mempermudah akses, lalu biarkan pelanggan menulis ulasan yang jujur sesuai pengalaman mereka.</p></div></div>
+            <h3><button class="faq-q" id="faq-q7" type="button" aria-expanded="false" aria-controls="faq-a7"><span>Apakah boleh menawarkan imbalan agar pelanggan memberi ulasan?</span><span class="faq-ico"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq-a" id="faq-a7" role="region" aria-labelledby="faq-q7"><div><p>Sebaiknya tidak. Kartu ini hanya mempermudah pelanggan menemukan halaman ulasan. Ajak pelanggan menulis ulasan berdasarkan pengalaman nyata. Jangan menawarkan imbalan atau hanya meminta ulasan positif. Baca <a href="https://support.google.com/contributionpolicy/answer/7400114?hl=id" target="_blank" rel="noopener noreferrer">kebijakan ulasan Google</a>.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <h3><button class="faq-q" id="faq-q8" type="button" aria-expanded="false" aria-controls="faq-a8"><span>Apakah kartu menjamin ulasan bertambah atau rating naik?</span><span class="faq-ico"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq-a" id="faq-a8" role="region" aria-labelledby="faq-q8"><div><p>Tidak. Kartu hanya mempermudah akses ke halaman ulasan. Jumlah ulasan dan rating tidak dijamin; pelanggan tetap bebas menulis pengalaman nyata dan memberikan penilaian jujur.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <h3><button class="faq-q" id="faq-q9" type="button" aria-expanded="false" aria-controls="faq-a9"><span>Apakah kartu fisik sudah termasuk dalam harga paket reseller?</span><span class="faq-ico"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq-a" id="faq-a9" role="region" aria-labelledby="faq-q9"><div><p>Tidak. Harga Rp57.000 dan Rp99.000 adalah biaya akses paket reseller yang tampil di halaman ini. Kartu fisik dipesan terpisah, dengan harga mengikuti supplier.</p></div></div>
           </div>
         </div>
       </div>
@@ -839,11 +874,11 @@
     <section id="mulai" class="footer-sec" aria-labelledby="mulai-title">
       <div class="wrap">
         <div class="glass cta-panel">
-          <h2 id="mulai-title" class="h2">Siap Menawarkan Kartu NFC + QR ke Berbagai Jenis Bisnis?</h2>
-          <p>Bandingkan isi paket sesuai kebutuhanmu. Pilih akses reseller atau tanyakan dulu cara kerja kartu sebelum memutuskan.</p>
+          <h2 id="mulai-title" class="h2">Siap mulai menawarkan kartu ke bisnis lokal?</h2>
+          <p>Bandingkan isi paket, pahami biaya kartu fisik yang terpisah, lalu mulai dengan calon bisnis yang kamu kenal.</p>
           <div class="cta-row">
             <a class="btn btn-copper btn-lg" href="https://lynk.id/rizzsmart/kpk14z0e0n46/checkout?type=detail&amp;token=.eJyrVipILErMLVayUoqOVdJRKslMzk4tgXOTMlPiC4oyk1OBAgZAfmFJJZCfn6JkZaijVJxaXJwJZCqB9OWXJObAlcIFSvMySyD80pLceLhV1bVKtQA9XSbt.atzHKg.YBiHl6kQrFVuonIFZ96co-BzEtk" target="_blank" rel="noopener noreferrer">Ambil Paket Master</a>
-            <a class="btn btn-ghost btn-lg" href="https://wa.me/6289673666525?text=Halo%20Rizz%20AI%20Architect%2C%20saya%20ingin%20bertanya%20tentang%20kartu%20NFC%20%2B%20QR%20dan%20paket%20reseller%20Rizz%20Review%20Card.%20Bisa%20jelaskan%20pilihan%20yang%20sesuai%20kebutuhan%20saya%3F" target="_blank" rel="noopener noreferrer"><svg class="ic"><use href="#i-chat"/></svg><span>Tanya via WhatsApp</span></a>
+            <a class="btn btn-ghost btn-lg" href="https://wa.me/6289673666525?text=Halo%2C%20saya%20tertarik%20menjadi%20reseller%20Rizz%20Review%20Card.%20Boleh%20minta%20detail%20paketnya%3F" target="_blank" rel="noopener noreferrer"><svg class="ic"><use href="#i-chat"/></svg><span>Konsultasi via WhatsApp</span></a>
           </div>
         </div>
       </div>
@@ -857,14 +892,15 @@
         <div class="footer-grid">
           <div>
             <div class="foot-brand">
-              <img src="logo.png.jpeg" alt="Rizz AI Architect Logo" width="48" height="48" class="logo-img" loading="lazy" decoding="async" data-fallback="R">
-              <span class="brand-name">Rizz AI Architect</span>
+              <img src="logo.png.jpeg" alt="Logo Rizz Review Card" width="48" height="48" class="logo-img" loading="lazy" decoding="async" data-fallback="R">
+              <span class="brand-name">Rizz Review Card</span>
             </div>
-            <p class="foot-desc">Kartu NFC + QR untuk membuka tautan ulasan Google, dengan pilihan akses supplier dan panduan reseller.</p>
+            <p class="foot-desc">Kartu Google Review NFC + QR untuk ditawarkan ke bisnis lokal, dengan akses reseller sesuai paket.</p>
           </div>
           <div>
             <p class="foot-title">Halaman</p>
             <ul class="foot-list">
+              <li><a href="#manfaat">Manfaat</a></li>
               <li><a href="#showcase">Kartu</a></li>
               <li><a href="#simulasi">Simulasi</a></li>
               <li><a href="#kalkulator">Kalkulator</a></li>
@@ -880,16 +916,12 @@
             </ul>
           </div>
         </div>
-        <p class="copyright">© 2026 Rizz AI Architect · Rizz Review Card.</p>
+        <p class="copyright">© 2026 Rizz Review Card. Produk independen, bukan produk resmi Google.</p>
       </div>
     </div>
   </footer>
 
-  <div class="mobile-sticky-cta" id="mobileStickyCta" aria-hidden="true" inert>
-    <a class="btn btn-copper" href="#harga"><span>Lihat Paket Reseller</span><span aria-hidden="true">→</span></a>
-  </div>
-
-  <a class="fab" href="https://wa.me/6289673666525?text=Halo%20Rizz%20AI%20Architect%2C%20saya%20ingin%20bertanya%20tentang%20kartu%20NFC%20%2B%20QR%20dan%20paket%20reseller%20Rizz%20Review%20Card.%20Bisa%20jelaskan%20pilihan%20yang%20sesuai%20kebutuhan%20saya%3F" target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp">
+  <a class="fab" href="https://wa.me/6289673666525?text=Halo%2C%20saya%20tertarik%20menjadi%20reseller%20Rizz%20Review%20Card.%20Boleh%20minta%20detail%20paketnya%3F" target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp">
     <svg class="ic"><use href="#i-chat"/></svg><span>Chat WhatsApp</span>
   </a>
 
@@ -900,7 +932,7 @@
     /* ⚙️ PENGATURAN KALKULATOR — angka di bawah ini hanya CONTOH.
        Ganti dengan harga supplier dan harga jual yang sebenarnya. */
     const CONFIG = {
-      costPerCard: 30000,   // modal supplier per kartu
+      costPerCard: 15000,   // contoh total modal fisik per kartu
       pricePerCard: 75000,  // harga jual ke klien per kartu
       packages: { p1: 57000, p2: 99000 }
     };
@@ -932,67 +964,7 @@
       });
     }
 
-    /* 2 · Scroll reveal satu kali, dengan fallback dan hormat pada reduced-motion. */
-    function initScrollReveal() {
-      if (reduceMotion || !('IntersectionObserver' in window)) return;
-      const targets = $$(
-        'main section:not(#hero) .sec-head, main section:not(#hero) .edition, main section:not(#hero) .glass.panel, main section:not(#hero) .price-card, main section:not(#hero) .step, main section:not(#hero) .faq-item, main section .cta-panel, footer .footer'
-      );
-      if (!targets.length) return;
-      targets.forEach((el, i) => {
-        el.setAttribute('data-reveal', '');
-        el.style.setProperty('--reveal-delay', (Math.min(i % 4, 3) * 55) + 'ms');
-      });
-      document.body.classList.add('reveal-enabled');
-      const reveal = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add('is-visible');
-          reveal.unobserve(entry.target);
-        });
-      }, { rootMargin: '0px 0px -7% 0px', threshold: 0.08 });
-      targets.forEach(el => reveal.observe(el));
-    }
-
-    /* 3 · CTA mobile muncul selepas hero; disembunyikan ketika memilih input/di area harga. */
-    function initMobileStickyCta() {
-      const bar = $('#mobileStickyCta'), hero = $('#hero'), pricing = $('#harga');
-      if (!bar || !hero || !pricing) return;
-      let pricingVisible = false;
-      let waitingForPricingAfterClick = false;
-      const setVisible = visible => {
-        bar.classList.toggle('is-visible', visible);
-        bar.setAttribute('aria-hidden', String(!visible));
-        bar.inert = !visible;
-        document.body.classList.toggle('has-sticky-cta', visible);
-      };
-      const update = () => {
-        const mobile = window.matchMedia('(max-width: 767px)').matches;
-        const heroPassed = hero.getBoundingClientRect().bottom < 100;
-        const focusIsField = document.activeElement && document.activeElement.matches('input, textarea, select');
-        setVisible(mobile && heroPassed && !pricingVisible && !waitingForPricingAfterClick && !focusIsField);
-      };
-      if ('IntersectionObserver' in window) {
-        const priceObserver = new IntersectionObserver(entries => {
-          const inPriceSection = entries.some(entry => entry.isIntersecting);
-          if (inPriceSection) waitingForPricingAfterClick = false;
-          pricingVisible = inPriceSection;
-          update();
-        }, { rootMargin: '-8% 0px -45% 0px', threshold: 0.01 });
-        priceObserver.observe(pricing);
-      }
-      window.addEventListener('scroll', update, { passive: true });
-      window.addEventListener('resize', update);
-      document.addEventListener('focusin', update);
-      document.addEventListener('focusout', () => requestAnimationFrame(update));
-      bar.querySelector('a')?.addEventListener('click', () => {
-        waitingForPricingAfterClick = true;
-        setVisible(false);
-      });
-      update();
-    }
-
-    /* 4 · Navbar: menu mobile, bayangan saat scroll, penanda seksi aktif */
+    /* 2 · Navbar: menu mobile, bayangan saat scroll, penanda seksi aktif */
     function initNav() {
       const nav = $('#nav'), btn = $('#menuBtn'), menu = $('#mobileMenu');
       if (!nav || !btn || !menu) return;
@@ -1022,7 +994,7 @@
       });
     }
 
-    /* 5 · Efek yang merespons kursor: tilt kartu + sorotan panel */
+    /* 3 · Efek yang merespons kursor: tilt kartu + sorotan panel */
     function initPointerFx() {
       if (!finePointer || reduceMotion) return;
       $$('[data-tilt]').forEach(el => {
@@ -1049,18 +1021,18 @@
       });
     }
 
-    /* 6 · Simulasikan Pengalaman Tap Kartu */
+    /* 4 · Live NFC Tap Simulator */
     function initSimulator() {
       const stage = $('#simStage'), btn = $('#tapBtn'), label = $('#tapBtnLabel'),
             status = $('#simStatus'), input = $('#shopName');
       if (!stage || !btn || !label || !status || !input) return;
 
       const STATUS = {
-        idle:     'Demo siap. Klik tombol untuk melihat ilustrasi alur pelanggan.',
-        approach: 'Menampilkan simulasi tap NFC…',
-        reading:  'Memperagakan alur pembacaan tautan…',
-        success:  'Simulasi berhasil. Contoh alur menuju tautan ulasan Google…',
-        review:   'Demo selesai. Kartu asli membuka tautan yang telah dikonfigurasi.'
+        idle:     'Siap. Klik tombol untuk melihat apa yang dialami pelanggan.',
+        approach: 'Simulasi: HP didekatkan ke kartu…',
+        reading:  'Simulasi: ilustrasi kartu sedang dibaca…',
+        success:  'Simulasi selesai. Ini bukan pembacaan NFC sungguhan.',
+        review:   'Alur demo selesai. Kartu fisik perlu diuji dengan tautan Google Review yang benar.'
       };
       let timers = [];
       const later = (ms, fn) => timers.push(setTimeout(fn, ms));
@@ -1123,28 +1095,21 @@
       setState('idle');
     }
 
-    /* 7 · Kalkulator Simulasi Margin Reseller */
+    /* 5 · Kalkulator Cuan Reseller */
     function initCalculator() {
-      const qty = $('#qty'), cost = $('#cost'), price = $('#price'), extra = $('#extraCost');
-      if (!qty || !cost || !price || !extra) return;
+      const qty = $('#qty'), cost = $('#cost'), price = $('#price');
+      if (!qty || !cost || !price) return;
       const out = {
-        qty: $('#qtyVal'), cost: $('#rCost'), rev: $('#rRev'), pkg: $('#rPkg'), extra: $('#rExtra'),
-        net: $('#rNet'), wrap: $('#rNetWrap'), note: $('#rNetNote'), unit: $('#rUnit'),
-        margin: $('#rMargin'), payback: $('#rPayback'), barCost: $('#barCost'), barProfit: $('#barProfit'),
-        scenarios: $$('.scenario-card')
+        qty: $('#qtyVal'), cost: $('#rCost'), rev: $('#rRev'), net: $('#rNet'), wrap: $('#rNetWrap'),
+        note: $('#rNetNote'), unit: $('#rUnit'), margin: $('#rMargin'), payback: $('#rPayback'),
+        barCost: $('#barCost'), barProfit: $('#barProfit')
       };
       cost.value = CONFIG.costPerCard;
       price.value = CONFIG.pricePerCard;
-      extra.value = '0';
 
       const num = el => { const v = Number(el.value); return Number.isFinite(v) && v > 0 ? Math.min(v, 100000000) : 0; };
       const pkgKey = () => ($('input[name="pkg"]:checked') || {}).value || 'p2';
       const pkgName = { p1: 'Paket 1', p2: 'Paket Master' };
-      const packageCta = $('.calc-res > a.btn');
-      const checkoutUrls = {
-        p1: 'https://lynk.id/rizzsmart/n56ewnm12l54/checkout?type=detail&token=.eJyrVipILErMLVayUoqOVdJRKslMzk4tgXOTMlPiC4oyk1OBAgZAfmFJJZCfn6JkZaijVJxaXJwJZCqB9OWXJObAlcIFSvMySyD80pLceLhV1bVKtQA9XSbt.atzHaA.s39hbsL-vnoPp1jCzNGORmOQ3e4',
-        p2: 'https://lynk.id/rizzsmart/kpk14z0e0n46/checkout?type=detail&token=.eJyrVipILErMLVayUoqOVdJRKslMzk4tgXOTMlPiC4oyk1OBAgZAfmFJJZCfn6JkZaijVJxaXJwJZCqB9OWXJObAlcIFSvMySyD80pLceLhV1bVKtQA9XSbt.atzHKg.YBiHl6kQrFVuonIFZ96co-BzEtk'
-      };
 
       // angka berubah halus dari nilai lama ke nilai baru
       const tween = (el, to) => {
@@ -1163,59 +1128,40 @@
       };
 
       const update = () => {
-        const q = Math.max(1, Number(qty.value) || 1), c = num(cost), p = num(price), extraTotal = num(extra), key = pkgKey(), pk = CONFIG.packages[key];
-        const totalCost = q * c, revenue = q * p, gross = revenue - totalCost, net = gross - pk - extraTotal;
-        if (packageCta) {
-          packageCta.href = checkoutUrls[key];
-          packageCta.textContent = key === 'p1' ? 'Ambil Paket 1' : 'Ambil Paket Master';
-        }
+        const q = Number(qty.value), c = num(cost), p = num(price), key = pkgKey(), pk = CONFIG.packages[key];
+        const totalCost = q * c, revenue = q * p, gross = revenue - totalCost, net = gross - pk;
         const unit = p - c;
         const margin = p > 0 ? (unit / p) * 100 : 0;
-        const payback = unit > 0 ? Math.ceil((pk + extraTotal) / unit) : null;
+        const payback = unit > 0 ? Math.ceil(pk / unit) : null;
 
-        qty.value = String(q);
         qty.style.setProperty('--pct', ((q - Number(qty.min)) / (Number(qty.max) - Number(qty.min)) * 100) + '%');
         qty.setAttribute('aria-valuetext', q + ' kartu');
         out.qty.textContent = q;
         $$('[data-qty]').forEach(b => b.setAttribute('aria-pressed', String(Number(b.dataset.qty) === q)));
-        out.scenarios.forEach(b => b.setAttribute('aria-pressed', String(Number(b.dataset.scenario) === q)));
 
         tween(out.cost, totalCost);
         tween(out.rev, revenue);
         tween(out.net, net);
-        out.pkg.textContent = rupiah(pk);
-        out.extra.textContent = rupiah(extraTotal);
         out.wrap.classList.toggle('is-neg', net < 0);
         out.note.textContent = net < 0
-          ? 'Dengan asumsi biaya yang dimasukkan, skenario ini masih minus. Uji harga, modal, atau jumlah penjualan yang realistis.'
-          : 'Sudah dikurangi modal kartu ' + rupiah(totalCost) + ', biaya paket ' + rupiah(pk) + ', dan biaya tambahan ' + rupiah(extraTotal) + '.';
+          ? 'Harga jual masih di bawah modal. Naikkan harga jual atau tambah jumlah kartu.'
+          : 'Sudah dikurangi biaya ' + pkgName[key] + ' ' + rupiah(pk) + '.';
         out.unit.textContent = rupiah(unit);
         out.margin.textContent = p > 0 ? Math.round(margin) + '%' : '–';
         out.payback.textContent = payback === null ? '–' : payback + ' kartu';
 
-        const allCosts = totalCost + pk + extraTotal;
-        const costPct = revenue > 0 ? Math.min(100, allCosts / revenue * 100) : (allCosts > 0 ? 100 : 0);
-        const profitPct = revenue > 0 && net > 0 ? Math.min(100 - costPct, net / revenue * 100) : 0;
+        const costPct = revenue > 0 ? Math.min(100, totalCost / revenue * 100) : 0;
         out.barCost.style.width = costPct + '%';
-        out.barProfit.style.width = profitPct + '%';
-
-        out.scenarios.forEach(card => {
-          const scenarioQty = Number(card.dataset.scenario);
-          const scenarioNet = (scenarioQty * p) - (scenarioQty * c) - pk - extraTotal;
-          const value = $('[data-scenario-net]', card);
-          if (value) value.textContent = rupiah(scenarioNet);
-          card.classList.toggle('is-neg', scenarioNet < 0);
-        });
+        out.barProfit.style.width = revenue > 0 ? (100 - costPct) + '%' : '0%';
       };
 
-      [qty, cost, price, extra].forEach(el => { el.addEventListener('input', update); el.addEventListener('change', update); });
+      [qty, cost, price].forEach(el => { el.addEventListener('input', update); el.addEventListener('change', update); });
       $$('input[name="pkg"]').forEach(r => r.addEventListener('change', update));
       $$('[data-qty]').forEach(b => b.addEventListener('click', () => { qty.value = b.dataset.qty; update(); }));
-      out.scenarios.forEach(b => b.addEventListener('click', () => { qty.value = b.dataset.scenario; update(); }));
       update();
     }
 
-    /* 8 · FAQ accordion (satu pertanyaan terbuka dalam satu waktu) */
+    /* 6 · FAQ accordion (satu pertanyaan terbuka dalam satu waktu) */
     function initFaq() {
       const btns = $$('.faq-q');
       const set = (btn, open) => {
@@ -1231,9 +1177,7 @@
     }
 
     initImageFallback();
-    initScrollReveal();
     initNav();
-    initMobileStickyCta();
     initPointerFx();
     initSimulator();
     initCalculator();
