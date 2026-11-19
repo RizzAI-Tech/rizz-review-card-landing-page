@@ -299,7 +299,7 @@
     @property --a{syntax:'<angle>';inherits:false;initial-value:0deg}
     .price-card{display:flex;flex-direction:column;padding:clamp(24px,3.4vw,40px);border-radius:28px}
     .price-card.is-pop{border-color:transparent;background-image:linear-gradient(180deg,rgba(180,146,120,.1),transparent 40%);box-shadow:0 0 90px -16px rgba(180,146,120,.55),0 40px 80px -30px rgba(0,0,0,.95),inset 0 1px 0 rgba(255,255,255,.1)}
-    @media(min-width:1024px){.price-card.is-pop{padding-block:56px}}
+    @media(min-width:1024px){.price-card,.price-card.is-pop{padding-block:40px}}
     .price-card.is-pop::after{content:"";position:absolute;inset:-1px;padding:2px;border-radius:inherit;pointer-events:none;background:conic-gradient(from var(--a,0deg),rgba(180,146,120,.15) 0deg,var(--copper) 60deg,#fff 100deg,var(--copper) 140deg,rgba(180,146,120,.15) 220deg,rgba(180,146,120,.55) 300deg,rgba(180,146,120,.15) 360deg);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:borderSpin 6s linear infinite}
     @keyframes borderSpin{to{--a:360deg}}
     .pop-badge{position:absolute;top:-15px;left:50%;z-index:2;transform:translateX(-50%);padding:.45rem 1.1rem;border-radius:99px;font-size:.75rem;font-weight:800;letter-spacing:.12em;white-space:nowrap;color:var(--ink);background:linear-gradient(135deg,#EBD2BE,var(--copper));box-shadow:0 0 28px rgba(180,146,120,.7)}
@@ -384,6 +384,7 @@
       [class~="lg:grid-cols-[1.1fr_.9fr]"]{grid-template-columns:1.1fr .9fr}
       [class~="lg:grid-cols-[.8fr_1.2fr]"]{grid-template-columns:.8fr 1.2fr}
       .lg\:items-center{align-items:center}
+      .lg\:items-stretch{align-items:stretch}
     }
     .eyebrow{display:inline-block;margin-bottom:1rem;font-size:.76rem;font-weight:800;letter-spacing:.17em;color:var(--copper-hi)}
     .benefits-grid{display:grid;grid-template-columns:1fr;gap:1rem}
@@ -712,7 +713,7 @@
                 <input type="radio" name="pkg" id="pkg-p1" value="p1">
                 <label for="pkg-p1">Paket 1<small>Rp57.000</small></label>
                 <input type="radio" name="pkg" id="pkg-p2" value="p2" checked>
-                <label for="pkg-p2">Paket Master<small>Rp99.000</small></label>
+                <label for="pkg-p2">All-In Master<small>Rp99.000</small></label>
               </div>
             </fieldset>
           </div>
@@ -734,7 +735,7 @@
               <div><dt>Margin kotor</dt><dd id="rMargin">0%</dd></div>
               <div><dt>Kartu untuk menutup biaya akses</dt><dd id="rPayback">–</dd></div>
             </dl>
-            <a class="btn btn-copper btn-lg" href="https://lynk.id/rizzsmart/kpk14z0e0n46/checkout?type=detail&amp;token=.eJyrVipILErMLVayUoqOVdJRKslMzk4tgXOTMlPiC4oyk1OBAgZAfmFJJZCfn6JkZaijVJxaXJwJZCqB9OWXJObAlcIFSvMySyD80pLceLhV1bVKtQA9XSbt.atzHKg.YBiHl6kQrFVuonIFZ96co-BzEtk" target="_blank" rel="noopener noreferrer">Ambil Paket Master</a>
+            <a id="calcCheckoutBtn" class="btn btn-copper btn-lg" href="https://lynk.id/rizzsmart/kpk14z0e0n46/checkout?type=detail&amp;token=.eJyrVipILErMLVayUoqOVdJRKslMzk4tgXOTMlPiC4oyk1OBAgZAfmFJJZCfn6JkZaijVJxaXJwJZCqB9OWXJObAlcIFSvMySyD80pLceLhV1bVKtQA9XSbt.atzHKg.YBiHl6kQrFVuonIFZ96co-BzEtk" target="_blank" rel="noopener noreferrer">Ambil Paket Master</a>
             <p class="disclaimer">Simulasi hanya menghitung modal kartu yang kamu masukkan dan biaya akses paket. Belum menghitung operasional, pajak, biaya pemasaran, atau stok yang belum terjual. Ini bukan jaminan penghasilan.</p>
           </div>
         </div>
@@ -745,21 +746,25 @@
     <section id="harga" class="section" aria-labelledby="harga-title">
       <div class="wrap">
         <div class="sec-head center">
-          <h2 id="harga-title" class="h2">Pilih paket yang sesuai kebutuhan Anda</h2>
-          <p>Harga berikut adalah biaya akses paket reseller. Kartu fisik dipesan terpisah dan harganya mengikuti supplier; cek isi paket sebelum checkout.</p>
+          <h2 id="harga-title" class="h2">Pilih paket yang sesuai kebutuhanmu</h2>
+          <p>Setiap paket memberikan akses reseller. Kartu fisik dipesan terpisah dan mengikuti harga supplier.</p>
         </div>
 
-        <div class="mx-auto grid max-w-5xl gap-8 lg:grid-cols-2 lg:items-center">
+        <div class="mx-auto grid max-w-5xl gap-8 lg:grid-cols-2 lg:items-stretch">
           <!-- PAKET 1 -->
           <article class="glass price-card">
             <p class="plan-kicker">Paket 1</p>
             <h3 class="h3">Akses Supplier Eksklusif</h3>
-            <p class="plan-desc">Untuk yang sudah punya cara jualan sendiri dan membutuhkan akses supplier kartu.</p>
+            <p class="plan-desc">Untuk kamu yang sudah punya strategi penjualan sendiri.</p>
             <p class="plan-price"><small>Rp</small><strong>57.000</strong></p>
             <ul class="checks">
-              <li>Akses supplier kartu NFC + QR sesuai penawaran paket</li>
+              <li>Akses supplier Rizz Review Card</li>
+              <li>Akses pembelian kartu dengan harga reseller</li>
               <li>Pilihan desain Dark Gold dan Light Gold</li>
-              <li>Siap pesan untuk klien pertama Anda</li>
+              <li>Akses dashboard multi-klien</li>
+              <li>Fitur PIN 4-digit pada setiap kartu</li>
+              <li>Akses WhatsApp Group Reseller Rizz AI Architect</li>
+              <li>Update produk dan informasi pemesanan</li>
             </ul>
             <a class="btn btn-outline btn-lg" href="https://lynk.id/rizzsmart/n56ewnm12l54/checkout?type=detail&amp;token=.eJyrVipILErMLVayUoqOVdJRKslMzk4tgXOTMlPiC4oyk1OBAgZAfmFJJZCfn6JkZaijVJxaXJwJZCqB9OWXJObAlcIFSvMySyD80pLceLhV1bVKtQA9XSbt.atzHaA.s39hbsL-vnoPp1jCzNGORmOQ3e4" target="_blank" rel="noopener noreferrer">Ambil Akses</a>
           </article>
@@ -768,17 +773,21 @@
           <article class="glass price-card is-pop">
             <span class="pop-badge">PALING POPULER</span>
             <p class="plan-kicker">Paket 2</p>
-            <h3 class="h3">Paket All-In Master</h3>
-            <p class="plan-desc">Pilihan untuk pemula yang ingin akses supplier sekaligus panduan dan fitur tambahan yang tercantum di paket.</p>
+            <h3 class="h3">All-In Master</h3>
+            <p class="plan-desc">Untuk pemula yang ingin memulai bisnis reseller dengan panduan dan materi pendukung yang lebih lengkap.</p>
             <p class="plan-price"><small>Rp</small><strong>99.000</strong></p>
             <ul class="checks">
-              <li>Semua isi Paket 1: Akses Supplier Eksklusif</li>
-              <li>Panduan A–Z menawarkan kartu ke berbagai bisnis</li>
-              <li>Akses dashboard multi-klien sesuai rincian paket</li>
-              <li>Fitur PIN 4-digit sebagaimana tercantum dalam penawaran</li>
+              <li>Semua fasilitas Paket 1</li>
+              <li>Panduan A–Z memulai bisnis reseller</li>
+              <li>Panduan mencari calon pelanggan (prospecting)</li>
+              <li>Template penawaran melalui WhatsApp</li>
+              <li>Script komunikasi dan follow-up pelanggan</li>
+              <li>Materi promosi dan katalog produk</li>
+              <li>Panduan presentasi produk kepada calon klien</li>
+              <li>Checklist onboarding pelanggan</li>
             </ul>
+            <p class="price-note">Selisih Rp42.000 untuk mendapatkan panduan bisnis, strategi penjualan, template, dan materi pendukung reseller.</p>
             <a class="btn btn-copper btn-lg" href="https://lynk.id/rizzsmart/kpk14z0e0n46/checkout?type=detail&amp;token=.eJyrVipILErMLVayUoqOVdJRKslMzk4tgXOTMlPiC4oyk1OBAgZAfmFJJZCfn6JkZaijVJxaXJwJZCqB9OWXJObAlcIFSvMySyD80pLceLhV1bVKtQA9XSbt.atzHKg.YBiHl6kQrFVuonIFZ96co-BzEtk" target="_blank" rel="noopener noreferrer">Ambil Paket Master</a>
-            <p class="price-note">Selisih Rp42.000 dari Paket 1. Periksa rincian isi paket dan pastikan sesuai kebutuhanmu sebelum checkout.</p>
           </article>
         </div>
 
@@ -831,8 +840,8 @@
 
         <div class="glass panel faq">
           <div class="faq-item">
-            <h3><button class="faq-q" id="faq-q1" type="button" aria-expanded="true" aria-controls="faq-a1"><span>Apa keuntungan utama bergabung menjadi Reseller Resmi?</span><span class="faq-ico"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3>
-            <div class="faq-a is-open" id="faq-a1" role="region" aria-labelledby="faq-q1"><div><p>Kamu mendapatkan akses harga grosir eksklusif <strong>Rp15.000/pcs tanpa minimum order</strong>. Karena harga pasaran jasa pembuatan kartu NFC ulasan Google di luar sana berkisar Rp75.000 hingga Rp150.000+, kamu punya potensi profit bersih (margin) hingga <strong>500% per klien</strong>. Kamu cukup fokus jualan dan cari klien, urusan suplai fisik dan infrastruktur sistem di-backup penuh oleh pusat.</p></div></div>
+            <h3><button class="faq-q" id="faq-q1" type="button" aria-expanded="true" aria-controls="faq-a1"><span>Apa perbedaan Paket 1 dan Paket 2?</span><span class="faq-ico"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq-a is-open" id="faq-a1" role="region" aria-labelledby="faq-q1"><div><p><strong>Paket 1 (Rp57.000)</strong> memberikan akses supplier dan pembelian dengan harga reseller, pilihan desain, dashboard multi-klien, fitur PIN 4-digit, WhatsApp Group reseller, serta update produk dan pemesanan. <strong>Paket 2 — All-In Master (Rp99.000)</strong> mencakup semua fasilitas Paket 1, ditambah panduan A–Z, panduan prospecting, template penawaran WhatsApp, script komunikasi dan follow-up, materi promosi, katalog, panduan presentasi, serta checklist onboarding pelanggan.</p></div></div>
           </div>
           <div class="faq-item">
             <h3><button class="faq-q" id="faq-q2" type="button" aria-expanded="false" aria-controls="faq-a2"><span>Apakah saya harus memiliki latar belakang IT atau paham pemrograman NFC?</span><span class="faq-ico"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3>
@@ -857,6 +866,14 @@
           <div class="faq-item">
             <h3><button class="faq-q" id="faq-q7" type="button" aria-expanded="false" aria-controls="faq-a7"><span>Apakah saya bisa membangun merek/branding sendiri sebagai penyedia jasa?</span><span class="faq-ico"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3>
             <div class="faq-a" id="faq-a7" role="region" aria-labelledby="faq-q7"><div><p>Tentu saja! Sistem kami bertindak sebagai <em>backend supplier</em> yang handal di belakang layar. Kamu bebas menentukan harga jual sendiri ke klien akhir (atas nama bisnismu sendiri), menjadikan bisnis jasa kartu ulasan NFC ini sebagai aset penghasilan pasif yang sepenuhnya berada di bawah kendalimu.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <h3><button class="faq-q" id="faq-q8" type="button" aria-expanded="false" aria-controls="faq-a8"><span>Apakah dashboard multi-klien dan PIN 4-digit hanya tersedia di Paket 2?</span><span class="faq-ico"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq-a" id="faq-a8" role="region" aria-labelledby="faq-q8"><div><p>Tidak. Akses dashboard multi-klien dan fitur PIN 4-digit termasuk dalam fasilitas <strong>Paket 1 maupun Paket 2</strong>. Perbedaan Paket 2 ada pada tambahan panduan bisnis, materi promosi, template, dan checklist untuk membantu menjalankan aktivitas reseller.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <h3><button class="faq-q" id="faq-q9" type="button" aria-expanded="false" aria-controls="faq-a9"><span>Apakah akses WhatsApp Group reseller termasuk di kedua paket?</span><span class="faq-ico"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3>
+            <div class="faq-a" id="faq-a9" role="region" aria-labelledby="faq-q9"><div><p>Ya. Pembeli Paket 1 maupun Paket 2 mendapatkan akses ke WhatsApp Group Reseller Rizz AI Architect.</p></div></div>
           </div>
         </div>
       </div>
@@ -1101,7 +1118,12 @@
 
       const num = el => { const v = Number(el.value); return Number.isFinite(v) && v > 0 ? Math.min(v, 100000000) : 0; };
       const pkgKey = () => ($('input[name="pkg"]:checked') || {}).value || 'p2';
-      const pkgName = { p1: 'Paket 1', p2: 'Paket Master' };
+      const pkgName = { p1: 'Paket 1', p2: 'All-In Master' };
+      const checkoutLinks = {
+        p1: 'https://lynk.id/rizzsmart/n56ewnm12l54/checkout?type=detail&token=.eJyrVipILErMLVayUoqOVdJRKslMzk4tgXOTMlPiC4oyk1OBAgZAfmFJJZCfn6JkZaijVJxaXJwJZCqB9OWXJObAlcIFSvMySyD80pLceLhV1bVKtQA9XSbt.atzHaA.s39hbsL-vnoPp1jCzNGORmOQ3e4',
+        p2: 'https://lynk.id/rizzsmart/kpk14z0e0n46/checkout?type=detail&token=.eJyrVipILErMLVayUoqOVdJRKslMzk4tgXOTMlPiC4oyk1OBAgZAfmFJJZCfn6JkZaijVJxaXJwJZCqB9OWXJObAlcIFSvMySyD80pLceLhV1bVKtQA9XSbt.atzHKg.YBiHl6kQrFVuonIFZ96co-BzEtk'
+      };
+      const checkoutBtn = $('#calcCheckoutBtn');
 
       // angka berubah halus dari nilai lama ke nilai baru
       const tween = (el, to) => {
@@ -1121,6 +1143,10 @@
 
       const update = () => {
         const q = Number(qty.value), c = num(cost), p = num(price), key = pkgKey(), pk = CONFIG.packages[key];
+        if (checkoutBtn) {
+          checkoutBtn.href = checkoutLinks[key];
+          checkoutBtn.textContent = key === 'p1' ? 'Ambil Akses' : 'Ambil Paket Master';
+        }
         const totalCost = q * c, revenue = q * p, gross = revenue - totalCost, net = gross - pk;
         const unit = p - c;
         const margin = p > 0 ? (unit / p) * 100 : 0;
